@@ -1,4 +1,24 @@
-[build-system]
-requires = ["setuptools", "torch>=2.1.0+cu121"]
-build-backend = "setuptools.build_meta"
+[tool.poetry]
+name = "groundingdino"
+version = "0.1.0"
+description = ""
+authors = ["Richard Brown <richard.brown@synthesia.io>"]
+readme = "README.md"
 
+[tool.poetry.dependencies]
+python = ">=3.10,<3.13"
+torch = "^2.1.0"
+torchvision = "^0.16.0"
+transformers = "^4.34.0"
+addict = "^2.4.0"
+yapf = "^0.40.2"
+timm = "^0.9.7"
+numpy = "^1.26.1"
+opencv-python = "^4.8.1.78"
+supervision = "0.6.0"
+pycocotools = "^2.0.7"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
